@@ -16,6 +16,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: var(--background);
+  user-select: none;
 }
 
 .game-container {
@@ -24,7 +25,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background: linear-gradient(
     330deg,
     #7d0928,
@@ -51,10 +52,10 @@ body {
   letter-spacing: 0.1rem;
 }
 
-.game-container .game {
+.game-container .game-board {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
 }
 
 .game-container .restart-button {
@@ -71,27 +72,47 @@ body {
 }
 
 .game-container .restart-button:hover {
-    background: #00456b;
-    transform: scale(1.05);
+  background: #00456b;
+  transform: scale(1.05);
 }
 
 .game-board {
-  border: 1px solid #ff0000;
-  width: 26.8rem;
-  height: 26.8rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.825rem;
+  gap: 0.5rem;
   transform-style: preserve-3d;
   perspective: 31.25rem;
 }
 
-.game-board content {
+.game-board .content {
   position: relative;
+  font-size: 2.5rem;
   width: 8.5rem;
   height: 8.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #b84c00;
+  background-color: #f19959;
+  transform: rotateY(180deg);
+  transition: 0.25s;
+}
+
+.content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #500101;
+  transition: 0.25s;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+  opacity: 0.85;
+}
+
+.content .cardOpen {
+  transform: rotateY(0deg);
+}
+
+.cardOpen::after, 
+.cardMatched::after {
+  transform: rotateY(180deg);
 }
