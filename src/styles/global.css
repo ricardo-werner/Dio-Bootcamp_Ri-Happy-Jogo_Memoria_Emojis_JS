@@ -1,5 +1,97 @@
 * {
   margin: 0;
   padding: 0;
+  outline: none;
   box-sizing: border-box;
+}
+
+:root {
+  --font-family: Monospace;
+  --background: #005e88;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background);
+}
+
+.game-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background: linear-gradient(
+    330deg,
+    #7d0928,
+    #8d1c24,
+    #9d2c1d,
+    #ab3c11,
+    #b84c00,
+    #c45e00,
+    #cf6f00,
+    #d88200,
+    #df9500,
+    #e4a900,
+    #e7bd00,
+    #e8d103
+  );
+  padding: 2.5rem 3.75rem;
+}
+
+.game-container h1 {
+  font-family: var(--font-family);
+  font-size: 2.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.game-container .game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.game-container .restart-button {
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background: var(--background);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.game-container .restart-button:hover {
+    background: #00456b;
+    transform: scale(1.05);
+}
+
+.game-board {
+  border: 1px solid #ff0000;
+  width: 26.8rem;
+  height: 26.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.825rem;
+  transform-style: preserve-3d;
+  perspective: 31.25rem;
+}
+
+.game-board content {
+  position: relative;
+  width: 8.5rem;
+  height: 8.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b84c00;
 }
