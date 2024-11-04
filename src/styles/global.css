@@ -7,26 +7,7 @@
 
 :root {
   --font-family: Monospace;
-  --background: #005e88;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: var(--background);
-  user-select: none;
-}
-
-.game-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  background: linear-gradient(
+  --background-container: linear-gradient(
     330deg,
     #7d0928,
     #8d1c24,
@@ -41,28 +22,44 @@ body {
     #e7bd00,
     #e8d103
   );
+  --background-game: #005e88;
+  --background-hover: #004c6d;
+  --text-color: #fff;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background-container);
+  user-select: none;
+}
+
+.game-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background: var(--background-game-board);
   padding: 2.5rem 3.75rem;
 }
 
 .game-container h1 {
   font-family: var(--font-family);
   font-size: 2.5rem;
-  color: #fff;
+  color: var(--text-color);
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
-.game-container .game-board {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
-}
-
-.game-container .restart-button {
+.game-container .game-reset {
   font-family: var(--font-family);
   font-size: 1.5rem;
   letter-spacing: 0.1rem;
-  color: #fff;
+  color: var(--text-color);
   background: var(--background);
   border: none;
   border-radius: 0.5rem;
@@ -71,20 +68,37 @@ body {
   cursor: pointer;
 }
 
-.game-container .restart-button:hover {
-  background: #00456b;
+.game-container .game-reset:hover {
+  background: var(--background-hover);
   transform: scale(1.05);
 }
 
-.game-board {
+.game {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   transform-style: preserve-3d;
   perspective: 31.25rem;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
-.game-board .content {
+.gameCard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: 8.5rem;
+  height: 8.5rem;
+  transform-style: preserve-3d;
+  perspective: 31.25rem;
+  align-content: center;
+  padding: 0 2.75rem;
+  font-size: xx-large;
+  border: 1px solid #000;
+}
+
+.gameCard .content {
   position: relative;
   font-size: 2.5rem;
   width: 8.5rem;
@@ -112,7 +126,7 @@ body {
   transform: rotateY(0deg);
 }
 
-.cardOpen::after, 
+.cardOpen::after,
 .cardMatched::after {
   transform: rotateY(180deg);
 }
