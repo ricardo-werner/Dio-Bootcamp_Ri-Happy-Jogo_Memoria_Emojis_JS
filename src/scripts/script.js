@@ -18,7 +18,11 @@ const emojis = [
     "🥶",
     "🥶",
     "🤐",
-    "🤐"
+    "🤐",
+    "🤢",
+    "🤢",
+    "😴",
+    "😴"
 ];
 let openCards = [];
 
@@ -26,10 +30,10 @@ let shuffledEmojis = emojis.sort(() => (Math.random() > 0.5 ? 2 : -1));
 
 for (let i = 0; i < emojis.length; i++) {
     let card = document.createElement("div");
-    card.className = "content";
+    card.className = "gameCard";
     card.innerHTML = shuffledEmojis[i];
     card.onclick = handleClick;
-    document.querySelector(".game-board").appendChild(card);
+    document.querySelector(".game").appendChild(card);
 }
 
 function handleClick() {
