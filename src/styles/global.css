@@ -36,7 +36,7 @@ body {
   user-select: none;
 }
 
-.game-container {
+.container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -44,10 +44,10 @@ body {
   align-items: center;
   gap: 1rem;
   background: var(--background-game-board);
-  padding: 2.5rem 3.75rem;
+  padding: 1rem 0;
 }
 
-.game-container h1 {
+.container h1 {
   font-family: var(--font-family);
   font-size: 2.5rem;
   color: var(--text-color);
@@ -55,78 +55,68 @@ body {
   letter-spacing: 0.1rem;
 }
 
-.game-container .game-reset {
+.reset {
   font-family: var(--font-family);
   font-size: 1.5rem;
+  font-weight: bold;
   letter-spacing: 0.1rem;
   color: var(--text-color);
   background: var(--background);
   border: none;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0.825rem 0.825rem;
   text-transform: uppercase;
   cursor: pointer;
 }
 
-.game-container .game-reset:hover {
+.reset:hover {
   background: var(--background-hover);
   transform: scale(1.05);
 }
 
 .game {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  transform-style: preserve-3d;
-  perspective: 31.25rem;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.gameCard {
+  width: 26.87rem;
+  height: 26.87rem;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   gap: 0.5rem;
-  width: 8.5rem;
-  height: 8.5rem;
   transform-style: preserve-3d;
   perspective: 31.25rem;
-  align-content: center;
-  padding: 0 2.75rem;
-  font-size: xx-large;
-  border: 1px solid #000;
 }
 
-.gameCard .content {
+.item {
   position: relative;
-  font-size: 2.5rem;
-  width: 8.5rem;
-  height: 8.5rem;
+  width: 6.25rem;
+  height: 6.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f19959;
+
+  font-size: 2rem;
   transform: rotateY(180deg);
   transition: 0.25s;
 }
 
-.content::after {
+.item::after {
   content: "";
   position: absolute;
   inset: 0;
   background: #500101;
+  /* opacity: 0.85; */
   transition: 0.25s;
   transform: rotateY(0deg);
   backface-visibility: hidden;
-  opacity: 0.85;
 }
 
-.content .cardOpen {
+.item.boxOpen {
   transform: rotateY(0deg);
 }
 
-.cardOpen::after,
-.cardMatched::after {
+.boxOpen::after,
+.boxMatch::after {
   transform: rotateY(180deg);
 }
+
