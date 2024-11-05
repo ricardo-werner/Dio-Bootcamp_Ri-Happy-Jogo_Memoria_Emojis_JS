@@ -1,12 +1,17 @@
 # Dio-Bootcamp_Ri-Happy-Jogo_Memoria_Emojis_JS
 
-Desafio prático do Bootcamp da Ri Happy, para desenvolver uma página para aplicação dos elementos fundamentais na programação.
+Este projeto é uma versão divertida e interativa do clássico Jogo da Memória, onde as cartas são representadas por emojis. Aqui, o foco principal está na lógica de programação em JavaScript, permitindo que a página do jogo seja gerada de forma dinâmica com base em uma lista de emojis.
 
-## Página estática do Jogo_Memoria_Emojis_JS
+## Página estática do Jogo de Memoria com Emojis
 
 ### 📜 Sobre o Projeto
 
-Este projeto consiste em desenvolver uma página de classificação de heroi, baseado na regra de armazenar e verificar a quantidade de XP (vida) e ter como resultado final a mensagem "O Heroi de nome **{nome}** está no nível de **{nivel}**".  Neste desenvolvimento, iremos aplicar os conceitos estudados de HTML:5, CSS e iniciar o aprendizado do Javascript, para dar ação interatividade à página.
+Desenvolver um jogo da memória onde o jogador precisa encontrar os pares de emojis iguais. O desafio envolve criar um sistema que:
+
+- Gere a área de jogo dinamicamente conforme a lista de emojis.
+- Aplique a lógica de comparação entre cartas selecionadas.
+- Armazene o estado dos pares encontrados.
+- Exiba uma mensagem de vitória personalizada: "Você é o vencedor!!!" ao finalizar o jogo com sucesso.
 
 ### 🔗 Links Úteis
 
@@ -20,26 +25,26 @@ Este projeto consiste em desenvolver uma página de classificação de heroi, ba
 
 ### 🎥 Deploy
 
-
+https://ricardo-werner.github.io/Dio-Bootcamp_Ri-Happy-Jogo_Memoria_Emojis_JS/
 
 #### Tela da Página
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_classificador.PN" alt="imagem da tela da página do classificador de heroi">
+  <img width="480" src="./src/to_readme/telaInicial.png" alt="imagem da tela da página do jogo de memória
 </p>
 
 #### Tela da Página com Resultado
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_resultado.PNG" alt="imagem da tela do resultado da página do classificador de heroi">
+  <img width="480" src="./src/to_readme/telaFinal.png" alt="imagem da tela do resultado da página do jogo de memória">
 </p>
 
 #### Tela do código
 <p align="center">
-  <img width="480" src="./src/to_readme/tela_codigo.PNG" alt="imagem dos códigos utilizados na programação da página do classificador de heroi">
+  <img width="480" src="./src/to_readme/telaCodigo.png" alt="imagem dos códigos utilizados na programação da página do jogo de memória">
 </p>
 
 ### 🧩 Desafio
 
-O desafio proposto neste projeto foi desenvolver uma página de classificação de heroi, aplicando a interatividade do usuário com a aplicação do que foi aprendido na utilização do javascript.
+O desafio proposto neste projeto foi desenvolver uma página do jogo de memória utilizando emojis no lugar das figuras, aplicando a interatividade do usuário com o jogo e o que foi aprendido na utilização do javascript.
 
 ### 📝 Requisitos da Aplicação
 
@@ -71,13 +76,13 @@ No desenvolvimento desta página, foram aplicados os seguintes conceitos:
 
 ### 💡 Reflexões
 
-Desenvolver este projeto foi mais um passo no meu desenvolvimento na arte da programação, proporcionando um aprofundamento nas práticas de desenvolvimento web. Foi possível explorar os conceitos básicos do HTML, a  organização do CSS e a interatividade do Javascript, além de aprender e iniciar o desenvolvimento uma nova forma do pensamento logico e sobre a importância de uma estruturação inteligente para facilitar a manutenção futura das aplicações.
+Desenvolver este projeto foi mais um passo no meu desenvolvimento na arte da programação, proporcionando um aprofundamento nas práticas de desenvolvimento web. Com este projeto, dei mais uma passo ao aprendizado no uso do JavaScript para criar interatividade e dinamismo em páginas web, além de reforçar o conhecimento sobre manipulação de dados e lógica de programação.
 
 ### 📦 Como Executar o Projeto
 
 1. Clone o repositório:
    
-  git clone 
+  git clone https://github.com/ricardo-werner/Dio-Bootcamp_Ri-Happy-Jogo_Memoria_Emojis_JS.git
 
 3. Abra o projeto no Visual Studio Code e ative o Go Live:
     
@@ -92,7 +97,7 @@ Desenvolver este projeto foi mais um passo no meu desenvolvimento na arte da pro
 4. Visualize o resultado na página web:
 
    <p align="center">
-     <img width="480" src="./src/to_readme/resultadoWeb.PNG" alt="Resultado na Web">
+     <img width="480" src="./src/to_readme/telaWeb.png" alt="Resultado na Web">
    </p>
 
 
