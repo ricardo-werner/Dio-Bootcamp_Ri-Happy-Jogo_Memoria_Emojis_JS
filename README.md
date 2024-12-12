@@ -15,7 +15,7 @@ Desenvolver um jogo da memória onde o jogador precisa encontrar os pares de emo
 
 ### 🔗 Links Úteis
 
-- [![portfolio](https://img.shields.io/badge/portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.github.com/ricardo-werner)
+- [![portfolio](https://img.shields.io/badge/portfolio-383838?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.github.com/ricardo-werner)
 
 - [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ricardo-werner)
 
